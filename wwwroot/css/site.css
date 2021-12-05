@@ -2,14 +2,15 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #4A954A;
 }
 
 .btn-primary {
@@ -28,6 +29,7 @@ a {
 -------------------------------------------------- */
 html {
   font-size: 14px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 @media (min-width: 768px) {
   html {
@@ -58,14 +60,18 @@ html {
   min-height: 100%;
 }
 
+
+
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #ADB0AD;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #ADB0AD;
 }
