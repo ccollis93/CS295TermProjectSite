@@ -1,6 +1,6 @@
 using System;
 
-namespace GameBaseSIte.Models
+namespace GameBaseSite.Models
 {
     public class ErrorViewModel
     {

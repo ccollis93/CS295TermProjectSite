@@ -1,0 +1,22 @@
+﻿@model GameBaseSite.Models.Quiz.QuizState; 
+@{
+    ViewData["Title"] = "Gamer Type Quiz";
+}
+
+<p><b>Question: @ViewBag.QuestionText </b> </p>
+
+<form asp-action="QuizIndex" method="post">
+    <input type="hidden" asp-for="powerScore" value="@ViewBag.powerScore" />
+    <input type="hidden" asp-for="casualScore" value="@ViewBag.casualScore" />
+    <input type="hidden" asp-for="oldschoolScore" value="@ViewBag.oldschoolScore" />
+    <input type="hidden" asp-for="brainyScore" value="@ViewBag.brainyScore" />
+    <input type="hidden" asp-for="questionId" value="@ViewBag.questionId" />
+
+    <input type="radio" asp-for="Answer" value="A" /> @ViewBag.AnswerPText<br />
+    <input type="radio" asp-for="Answer" value="B" /> @ViewBag.AnswerCText<br />
+    <input type="radio" asp-for="Answer" value="C" /> @ViewBag.AnswerOText<br />
+    <input type="radio" asp-for="Answer" value="D" /> @ViewBag.AnswerBText<br />
+
+
+    <button type="submit">Submit</button>
+</form>

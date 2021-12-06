@@ -1,0 +1,26 @@
+﻿@model GameModel
+@{ 
+    ViewData["Title"] = "Edit";
+}
+
+<form asp-action="LibraryIndex" method="post">
+    <input type="hidden" asp-for="GameId" />
+
+    <label asp-for="Title">Title: </label>
+    
+    <label asp-for="Genre">Genre: </label>
+    <input asp-for="Genre" />
+
+    <label asp-for="EsrbRating">ESRB Rating: </label>
+    <input asp-for="EsrbRating" />
+
+    <label asp-for="UserRating">User Rating: </label>
+    <input asp-for="UserRating" />
+
+    <label asp-for="Status">Completed? </label>
+    <input asp-for="Status" />
+
+    <label asp-for="Review">Review: </label>
+    <input asp-for="Review" />
+    <button type="submit">@ViewBag.button</button>
+</form>

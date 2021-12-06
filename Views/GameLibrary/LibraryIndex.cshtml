@@ -1,5 +1,45 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GameModel
 @{
+    ViewData["Title"] = "Library";
 }
+<div>
+    <h1 class="display-4">GameBase Game Library</h1>
+    <div class="container">
+        
+            <h2>A list of every game our users have added to the library so far.</h2>
+        
+    </div>
+
+
+    <h4>Don't see the game you're looking for?<a class="nav-link" asp-controller="GameLibrary" asp-action="Edit" asp-route-id="0"> Click here to upload it!</a></h4><br />
+    <form asp-action="Search" method="post">
+        <label asp-for="Title">Title:</label><input asp-for="Title" />
+        <button type="submit">Search</button>
+    </form>
+    <hr />
+    <table border="1" style="border-collapse: collapse; width: 100%; height: 105px;">
+        <thead>
+            <tr style="height: 21px;">
+                <th style="width: 10%; height: 21px;">ID</th>
+                <th style="width: 10%; height: 21px;">Title</th>
+                <th style="width: 10%; height: 21px;">Genre</th>
+                <th style="width: 10%; height: 21px;">ESRB</th>
+                <th style="width: 10%; height: 21px;">Edit</th>
+                <th style="width: 10%; height: 21px;">Remove</th>
+
+        </thead>
+        <tbody>
+            @foreach (var game in ViewBag.games)
+            {
+                <tr style="height: 21px;">
+                    <th style="width: 10%; height: 21px;">@game.GameId</th>
+                    <td style="width: 10%; height: 21px;">@game.Title</td>
+                    <td style="width: 10%; height: 21px;">@game.Genre</td>
+                    <td style="width: 10%; height: 21px;">@game.EsrbRating</td>
+                    <td style="width: 10%; height: 21px;"><a asp-controller="GameLibrary" asp-action="Edit" asp-route-id="@game.GameId">Edit</a></td>
+                    <td style="width: 10%; height: 21px;"><a asp-controller="GameLibrary" asp-action="Remove" asp-route-id="@game.GameId">Remove</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

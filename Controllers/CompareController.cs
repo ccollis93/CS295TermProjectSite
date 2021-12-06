@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GameBaseSIte.Controllers
+namespace GameBaseSite.Controllers
 {
     public class CompareController : Controller
     {
-        public IActionResult Index()
+        public IActionResult CompareIndex()
         {
             return View();
         }
