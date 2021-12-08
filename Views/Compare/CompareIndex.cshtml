@@ -1,0 +1,15 @@
+﻿@model Search
+
+@{ 
+    ViewData["Title"] = "Compare";
+}
+
+
+<div>
+    <h4>Enter the IDs of the user's who's Game Libraries you want to compare</h4>
+    <form asp-action="CompareResult" method="post">
+        <label asp-for="Query">User1:</label><input asp-for="Query" />
+        <label asp-for="Query">User2:</label><input asp-for="Query" />
+        <button type="submit">Search</button>
+    </form>
+</div>

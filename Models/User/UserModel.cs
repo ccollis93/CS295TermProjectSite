@@ -6,17 +6,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GameBaseSite.Models
 {
-    public class UserGameModel
+    public class UserModel
     {
-        
         [Key]
-        public string GameId { get; set; }
-
-        [Key]
-        public string UserId { get; set; }
+       public string UserId { get; set; }
 
         [Required]
-        public string Title { get; set; }
-        
+       public string UserName { get; set; }
+
+       public string PlayStyle { get; set; }
+
+       public string FavoriteGame { get; set; } 
+      
     }
 }

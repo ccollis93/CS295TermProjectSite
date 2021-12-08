@@ -1,0 +1,28 @@
+﻿@model Search
+
+
+<section>
+<div>
+    <div style="float:left">
+        <h3>User 1</h3>
+        <ul>
+            @foreach (string result in ViewBag.results)
+            {
+                <li>@result</li>
+            }
+        </ul>
+    </div>
+</div>
+
+<div>
+    <div>
+        <h3>User 2</h3>
+        <ul>
+            @foreach (string result in ViewBag.results)
+            {
+                <li>@result</li>
+            }
+        </ul>
+    </div>
+</div>
+</section>

@@ -19,29 +19,30 @@ namespace GameBaseSite.Models.Quiz
         public string getType()
         {
             int topScore = 0;
-            string gamerType = "Casual";
+            string gamerType = "";
 
-            if(powerScore > topScore)
+            if (powerScore > topScore)
             {
                 topScore = powerScore;
                 gamerType = "Power";
             }
 
-            if(casualScore > topScore)
+            if (casualScore > topScore)
             {
                 topScore = casualScore;
+                gamerType = "Casual";
             }
 
-            if(oldschoolScore > topScore)
+            if (oldschoolScore > topScore)
             {
                 topScore = oldschoolScore;
-                gamerType = "Old School";
+                gamerType = "OldSchool";
             }
 
-            if(brainyScore > topScore)
+            if (brainyScore > topScore)
             {
                 topScore = brainyScore;
-                gamerType = "Brainiac";
+                gamerType = "Brainy";
             }
             return gamerType;
         }

@@ -20,6 +20,7 @@ namespace GameBaseSite.Controllers
             Context = ctx;
         }
 
+  
 
         [HttpGet]
         public IActionResult LibraryIndex()
@@ -31,7 +32,7 @@ namespace GameBaseSite.Controllers
         [HttpPost]
         public IActionResult LibraryIndex(GameModel model)
         {
-            if (model.GameId > 0)
+            if (String.IsNullOrEmpty(model.GameId))
             {
                 Context.Games.Update(model);
                 Context.SaveChanges();
@@ -47,10 +48,10 @@ namespace GameBaseSite.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Edit(string id)
         {
             GameModel game;
-            if (id > 0)
+            if (String.IsNullOrEmpty(id))
             {
                 game = Context.Games.Find(id);
                 ViewBag.button = "Save";
@@ -58,15 +59,15 @@ namespace GameBaseSite.Controllers
             }
             else
             {
-                game = new GameModel();
-                ViewBag.button = "Add";
+                game = Context.Games.Find(id);
+                ViewBag.button = "Save";
+                return View(game);
             }
-
-            return View(game);
+       
         }
 
         [HttpGet]
-        public IActionResult Remove(int id)
+        public IActionResult Remove(string id)
         {
             GameModel game = Context.Games.Find(id);
             Context.Games.Remove(game);

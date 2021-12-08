@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GameBaseSite.Models
 {
-    public class GameModel
+    public class ProfileGameModel
     {
         [Key]
         public string GameId { get; set; } //unique identifier for each game. 

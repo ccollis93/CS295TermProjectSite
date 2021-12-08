@@ -17,24 +17,18 @@
             <tr style="height: 21px;">
                 <th style="width: 10%; height: 21px;">Title</th>
                 <th style="width: 10%; height: 21px;">Genre</th>
-                <th style="width: 10%; height: 21px;">ESRB</th>
-                <th style="width: 10%; height: 21px;">User Rating</th>
-                <th style="width: 10%; height: 21px;">Completed?</th>
-                <th style="width: 10%; height: 21px;">Review</th>
+                <th style="width: 10%; height: 21px;">ESRB</th>         
                 <th style="width: 10%; height: 21px;">Edit</th>
                 <th style="width: 10%; height: 21px;">Remove</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var game in ViewBag.userGames)
+            @foreach (var game in ViewBag.Games)
             {
             <tr style="height: 21px;">
                 <td style="width: 10%; height: 21px;">@game.Title</td>
                 <td style="width: 10%; height: 21px;">@game.Genre</td>
                 <td style="width: 10%; height: 21px;">@game.EsrbRating</td>
-                <td style="width: 10%; height: 21px;">@game.UserRating</td>
-                <td style="width: 10%; height: 21px;">@game.Status</td>
-                <td style="width: 10%; height: 21px;">@game.Review</td>
                 <td style="width: 10%; height: 21px;"><a asp-controller="Profile" asp-action="Edit" asp-route-id="@game.GameId">Edit</a></td>
                 <td style="width: 10%; height: 21px;"><a asp-controller="Profile" asp-action="Remove" asp-route-id="@game.GameId">Remove</a></td>
             </tr>

@@ -63,11 +63,10 @@ namespace GameBaseSite.Controllers
 
             if(ViewBag.questionId > 10)
             {
-                ViewBag.Type = inModel.getType();
+                
 
                 var typeTemp = inModel.getType();
-
-                
+                ViewBag.Type = typeTemp;
                 ViewBag.games = Context.Games.Where(g => g.Type.Contains(typeTemp)).ToList();
 
                 return View("GamerType");
