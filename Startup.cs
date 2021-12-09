@@ -26,6 +26,9 @@ namespace GameBaseSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+           
+
             services.AddDbContext<LibraryContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LibraryContext")));
         }
 
