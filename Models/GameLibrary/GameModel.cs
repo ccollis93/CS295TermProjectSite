@@ -9,7 +9,7 @@ namespace GameBaseSite.Models
     public class GameModel
     {
         [Key]
-        public string GameId { get; set; } //unique identifier for each game. 
+        public int GameId { get; set; } //unique identifier for each game. 
 
 
         [Required]
@@ -21,7 +21,7 @@ namespace GameBaseSite.Models
         public string Genre { get; set; } //user inputs this, only validation is length limit
 
         [Required]
-        public string EsrbRating { get; set; } //user picks from a list of ratings
+        public string EsrbRating { get; set; } 
 
         
         [MaxLength(25)]

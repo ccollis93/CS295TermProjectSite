@@ -9,7 +9,7 @@ namespace GameBaseSite.Models
     public class UserModel
     {
         [Key]
-       public string UserId { get; set; }
+       public int UserId { get; set; }
 
         [Required]
        public string UserName { get; set; }

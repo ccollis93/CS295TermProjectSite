@@ -32,14 +32,15 @@ namespace GameBaseSite.Controllers
         [HttpPost]
         public IActionResult LibraryIndex(GameModel model)
         {
-            if (String.IsNullOrEmpty(model.GameId))
+            if (model.GameId == 0)
             {
-                Context.Games.Update(model);
+                        
+                Context.Games.Add(model);
                 Context.SaveChanges();
             }
             else
-            {
-                Context.Games.Add(model);
+            {       
+                Context.Games.Update(model);
                 Context.SaveChanges();
             }
 
@@ -48,13 +49,23 @@ namespace GameBaseSite.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(string id)
+        public IActionResult Edit(int id)
         {
+            
             GameModel game;
-            if (String.IsNullOrEmpty(id))
+            if (id == 0)
             {
-                game = Context.Games.Find(id);
-                ViewBag.button = "Save";
+
+                /*
+                int newId = int.Parse(id);
+                newId++;
+                string stringId = newId.ToString();
+                id = stringId;
+                game = Context.Games.Add(id);
+                ViewBag.button = "Add";
+                */
+                ViewBag.button = "Add";
+                game = new GameModel();
                 return View(game);
             }
             else
@@ -67,7 +78,7 @@ namespace GameBaseSite.Controllers
         }
 
         [HttpGet]
-        public IActionResult Remove(string id)
+        public IActionResult Remove(int id)
         {
             GameModel game = Context.Games.Find(id);
             Context.Games.Remove(game);
@@ -84,7 +95,15 @@ namespace GameBaseSite.Controllers
             return View();
         }
 
-
+         /*
+        public string GameIdIncrement(GameModel game)
+        {
+           var gameList = Context.Games.ToList();
+           string length = gameList.Count.ToString();
+           var lastGame = gameList.Where(x => x.GameId == length);
+           string idString = lastGame.ToString();
+        }
+         */
     
 
     }

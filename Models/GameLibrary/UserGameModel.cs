@@ -10,10 +10,10 @@ namespace GameBaseSite.Models
     {
         
         [Key]
-        public string GameId { get; set; }
+        public int GameId { get; set; }
 
         [Key]
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         [Required]
         public string Title { get; set; }

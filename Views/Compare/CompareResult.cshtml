@@ -2,27 +2,40 @@
 
 
 <section>
-<div>
-    <div style="float:left">
-        <h3>User 1</h3>
-        <ul>
-            @foreach (string result in ViewBag.results)
-            {
-                <li>@result</li>
-            }
-        </ul>
-    </div>
-</div>
-
-<div>
     <div>
-        <h3>User 2</h3>
-        <ul>
-            @foreach (string result in ViewBag.results)
-            {
-                <li>@result</li>
-            }
-        </ul>
+        <div style="float:left">
+            <h3>User 1</h3>
+            <ul>
+                @foreach (string result in ViewBag.results)
+                {
+                    <li>@result</li>
+                }
+            </ul>
+        </div>
     </div>
-</div>
+
+    <div>
+        <div>
+            <h3>User 2</h3>
+            <ul>
+                @foreach (string result2 in ViewBag.results2)
+                {
+                    <li>@result2</li>
+                }
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div style="align-content: center">
+        <div>
+            <h3>Your both own</h3>
+            <ul>
+                @foreach (string common in ViewBag.common)
+                {
+                    <li>@common</li>
+                }
+            </ul>
+        </div>
+    </div>
+
 </section>

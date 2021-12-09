@@ -13,7 +13,7 @@ namespace GameBaseSite.Models.Database
 
             users.Add(new UserModel
             {
-                UserId = "111",
+                UserId = 111,
                 UserName = "GameDude01",
                 PlayStyle = "Power",
                 FavoriteGame = "PC Building Simulator"
@@ -21,7 +21,7 @@ namespace GameBaseSite.Models.Database
 
             users.Add(new UserModel
             {
-                UserId = "222",
+                UserId = 222,
                 UserName = "starchild",
                 PlayStyle = "Brainy",
                 FavoriteGame = "The Impossible Game"
@@ -29,7 +29,7 @@ namespace GameBaseSite.Models.Database
 
             users.Add(new UserModel
             {
-                UserId = "333",
+                UserId = 333,
                 UserName = "MomOfThree",
                 PlayStyle = "Casual",
                 FavoriteGame = "Candy Crush"
@@ -37,7 +37,7 @@ namespace GameBaseSite.Models.Database
 
             users.Add(new UserModel
             {
-                UserId = "444",
+                UserId = 444,
                 UserName = "corvetteFan1963",
                 PlayStyle = "OldSchool",
                 FavoriteGame = "Asteroids"
@@ -52,79 +52,79 @@ namespace GameBaseSite.Models.Database
 
             userGames.Add(new UserGameModel
             {
-                GameId = "1",
-                UserId = "222",
+                GameId = 1,
+                UserId = 222,
                  Title = "Quake"
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "2",
-                UserId = "111",
+                GameId = 2,
+                UserId = 111,
                 Title = "Crusader Kings III",
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "5",
-                UserId = "111",
+                GameId = 5,
+                UserId = 111,
                 Title = "Escape From Tarkov"
 
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "2",
-                UserId = "222",
+                GameId = 2,
+                UserId = 222,
                 Title = "Crusader Kings III",
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "4",
-                UserId = "222",
+                GameId = 4,
+                UserId = 222,
                 Title = "Waluigi World 2"
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "7",
-                UserId = "111",
+                GameId = 7,
+                UserId = 111,
                 Title = "The Initiate",
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "6",
-                UserId = "333",
+                GameId = 6,
+                UserId = 333,
                 Title = "Bloons TD -1"
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "3",
-                UserId = "333",
+                GameId = 3,
+                UserId = 333,
                 Title = "Vegas Casino Collections"
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "8",
-                UserId = "444",
+                GameId = 8,
+                UserId = 444,
                 Title = "Mr.Peck-Mon"
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "4",
-                UserId = "444",
+                GameId = 4,
+                UserId = 444,
                 Title = "Waluigi World 2"
             });
 
             userGames.Add(new UserGameModel
             {
-                GameId = "1",
-                UserId = "444",
+                GameId = 1,
+                UserId = 444,
                 Title = "Quake",
             });
 
@@ -138,7 +138,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "1",
+                GameId = 1,
                 Title = "Quake",
                 Genre = "First Person Shooter",
                 EsrbRating = "M",                            
@@ -147,7 +147,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "2",
+                GameId = 2,
                 Title = "Crusader Kings III",
                 Genre = "Paradox Grand Strategy",
                 EsrbRating = "M",
@@ -156,7 +156,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "3",
+                GameId = 3,
                 Title = "Vegas Casino Collections",
                 Genre = "Casino Games",
                 EsrbRating = "T",
@@ -165,7 +165,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "4",
+                GameId = 4,
                 Title = "Waluigi World 2",
                 Genre = "2d Platformer",
                 EsrbRating = "E",
@@ -174,7 +174,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "5",
+                GameId = 5,
                 Title = "Escape From Tarkov",
                 Genre = "Survival Horror",
                 EsrbRating = "M",
@@ -183,7 +183,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "6",
+                GameId = 6,
                 Title = "Bloons TD -1",
                 Genre = "Tower Defense",
                 EsrbRating = "E",
@@ -192,7 +192,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "7",
+                GameId = 7,
                 Title = "The Initiate",
                 Genre = "Adventure Puzzle",
                 EsrbRating = "T",
@@ -201,7 +201,7 @@ namespace GameBaseSite.Models.Database
 
             games.Add(new GameModel
             {
-                GameId = "8",
+                GameId = 8,
                 Title = "Mr.Peck-Mon",
                 Genre = "Arcade",
                 EsrbRating = "E",
@@ -217,7 +217,7 @@ namespace GameBaseSite.Models.Database
 
             profileGames.Add(new ProfileGameModel
             {
-                GameId = "4",
+                GameId = 4,
                 Title = "Waluigi World 2",
                 Genre = "2d Platformer",
                 EsrbRating = "E",
@@ -226,7 +226,7 @@ namespace GameBaseSite.Models.Database
 
             profileGames.Add(new ProfileGameModel
             {
-                GameId = "5",
+                GameId = 5,
                 Title = "Escape From Tarkov",
                 Genre = "Survival Horror",
                 EsrbRating = "M",
@@ -235,7 +235,7 @@ namespace GameBaseSite.Models.Database
 
             profileGames.Add(new ProfileGameModel
             {
-                GameId = "2",
+                GameId = 2,
                 Title = "Crusader Kings III",
                 Genre = "Paradox Grand Strategy",
                 EsrbRating = "M",
@@ -244,7 +244,7 @@ namespace GameBaseSite.Models.Database
 
             profileGames.Add(new ProfileGameModel
             {
-                GameId = "3",
+                GameId = 3,
                 Title = "Vegas Casino Collections",
                 Genre = "Casino Games",
                 EsrbRating = "T",

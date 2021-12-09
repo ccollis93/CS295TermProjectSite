@@ -7,6 +7,8 @@ namespace GameBaseSite.Models
 {
     public class Search
     {
-        public string Query { get; set; }
+        public int Query { get; set; }
+
+        public int Query2 { get; set; }
     }
 }

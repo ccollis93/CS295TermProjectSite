@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameBaseSite.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    [Migration("20211208154932_Initial")]
+    [Migration("20211209015338_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,8 +22,10 @@ namespace GameBaseSite.Migrations
 
             modelBuilder.Entity("GameBaseSite.Models.GameModel", b =>
                 {
-                    b.Property<string>("GameId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("GameId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("EsrbRating")
                         .IsRequired()
@@ -50,7 +52,7 @@ namespace GameBaseSite.Migrations
                     b.HasData(
                         new
                         {
-                            GameId = "1",
+                            GameId = 1,
                             EsrbRating = "M",
                             Genre = "First Person Shooter",
                             Title = "Quake",
@@ -58,7 +60,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "2",
+                            GameId = 2,
                             EsrbRating = "M",
                             Genre = "Paradox Grand Strategy",
                             Title = "Crusader Kings III",
@@ -66,7 +68,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "3",
+                            GameId = 3,
                             EsrbRating = "T",
                             Genre = "Casino Games",
                             Title = "Vegas Casino Collections",
@@ -74,7 +76,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "4",
+                            GameId = 4,
                             EsrbRating = "E",
                             Genre = "2d Platformer",
                             Title = "Waluigi World 2",
@@ -82,7 +84,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "5",
+                            GameId = 5,
                             EsrbRating = "M",
                             Genre = "Survival Horror",
                             Title = "Escape From Tarkov",
@@ -90,7 +92,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "6",
+                            GameId = 6,
                             EsrbRating = "E",
                             Genre = "Tower Defense",
                             Title = "Bloons TD -1",
@@ -98,7 +100,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "7",
+                            GameId = 7,
                             EsrbRating = "T",
                             Genre = "Adventure Puzzle",
                             Title = "The Initiate",
@@ -106,7 +108,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "8",
+                            GameId = 8,
                             EsrbRating = "E",
                             Genre = "Arcade",
                             Title = "Mr.Peck-Mon",
@@ -116,8 +118,10 @@ namespace GameBaseSite.Migrations
 
             modelBuilder.Entity("GameBaseSite.Models.ProfileGameModel", b =>
                 {
-                    b.Property<string>("GameId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("GameId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("EsrbRating")
                         .IsRequired()
@@ -144,7 +148,7 @@ namespace GameBaseSite.Migrations
                     b.HasData(
                         new
                         {
-                            GameId = "4",
+                            GameId = 4,
                             EsrbRating = "E",
                             Genre = "2d Platformer",
                             Title = "Waluigi World 2",
@@ -152,7 +156,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "5",
+                            GameId = 5,
                             EsrbRating = "M",
                             Genre = "Survival Horror",
                             Title = "Escape From Tarkov",
@@ -160,7 +164,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "2",
+                            GameId = 2,
                             EsrbRating = "M",
                             Genre = "Paradox Grand Strategy",
                             Title = "Crusader Kings III",
@@ -168,7 +172,7 @@ namespace GameBaseSite.Migrations
                         },
                         new
                         {
-                            GameId = "3",
+                            GameId = 3,
                             EsrbRating = "T",
                             Genre = "Casino Games",
                             Title = "Vegas Casino Collections",
@@ -178,11 +182,11 @@ namespace GameBaseSite.Migrations
 
             modelBuilder.Entity("GameBaseSite.Models.UserGameModel", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("GameId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("GameId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -195,76 +199,78 @@ namespace GameBaseSite.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "222",
-                            GameId = "1",
+                            UserId = 222,
+                            GameId = 1,
                             Title = "Quake"
                         },
                         new
                         {
-                            UserId = "111",
-                            GameId = "2",
+                            UserId = 111,
+                            GameId = 2,
                             Title = "Crusader Kings III"
                         },
                         new
                         {
-                            UserId = "111",
-                            GameId = "5",
+                            UserId = 111,
+                            GameId = 5,
                             Title = "Escape From Tarkov"
                         },
                         new
                         {
-                            UserId = "222",
-                            GameId = "2",
+                            UserId = 222,
+                            GameId = 2,
                             Title = "Crusader Kings III"
                         },
                         new
                         {
-                            UserId = "222",
-                            GameId = "4",
+                            UserId = 222,
+                            GameId = 4,
                             Title = "Waluigi World 2"
                         },
                         new
                         {
-                            UserId = "111",
-                            GameId = "7",
+                            UserId = 111,
+                            GameId = 7,
                             Title = "The Initiate"
                         },
                         new
                         {
-                            UserId = "333",
-                            GameId = "6",
+                            UserId = 333,
+                            GameId = 6,
                             Title = "Bloons TD -1"
                         },
                         new
                         {
-                            UserId = "333",
-                            GameId = "3",
+                            UserId = 333,
+                            GameId = 3,
                             Title = "Vegas Casino Collections"
                         },
                         new
                         {
-                            UserId = "444",
-                            GameId = "8",
+                            UserId = 444,
+                            GameId = 8,
                             Title = "Mr.Peck-Mon"
                         },
                         new
                         {
-                            UserId = "444",
-                            GameId = "4",
+                            UserId = 444,
+                            GameId = 4,
                             Title = "Waluigi World 2"
                         },
                         new
                         {
-                            UserId = "444",
-                            GameId = "1",
+                            UserId = 444,
+                            GameId = 1,
                             Title = "Quake"
                         });
                 });
 
             modelBuilder.Entity("GameBaseSite.Models.UserModel", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("FavoriteGame")
                         .HasColumnType("nvarchar(max)");
@@ -283,28 +289,28 @@ namespace GameBaseSite.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "111",
+                            UserId = 111,
                             FavoriteGame = "PC Building Simulator",
                             PlayStyle = "Power",
                             UserName = "GameDude01"
                         },
                         new
                         {
-                            UserId = "222",
+                            UserId = 222,
                             FavoriteGame = "The Impossible Game",
                             PlayStyle = "Brainy",
                             UserName = "starchild"
                         },
                         new
                         {
-                            UserId = "333",
+                            UserId = 333,
                             FavoriteGame = "Candy Crush",
                             PlayStyle = "Casual",
                             UserName = "MomOfThree"
                         },
                         new
                         {
-                            UserId = "444",
+                            UserId = 444,
                             FavoriteGame = "Asteroids",
                             PlayStyle = "OldSchool",
                             UserName = "corvetteFan1963"
